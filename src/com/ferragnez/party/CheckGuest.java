@@ -39,7 +39,7 @@ public class CheckGuest {
             i++;
         }
 
-        if ( trovato == false ) {
+        if ( !trovato ) {
             System.out.println("Non sei tra gli invitati.");
         }
     }
