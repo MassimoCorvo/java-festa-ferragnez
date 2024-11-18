@@ -15,7 +15,8 @@ public class CheckGuest {
         input.close();
 
         boolean trovato = false;
-        for(int i = 0; i < listaInvitati.length; i++){
+
+        /*for(int i = 0; i < listaInvitati.length; i++){
 
             if ( listaInvitati[i].equals(nomeInput) ) {
                 System.out.println("Sei tra gli invitati!");
@@ -23,10 +24,23 @@ public class CheckGuest {
                 break;
             }
 
+        } */
+
+        int i = 0;
+        while ( !trovato && (i < listaInvitati.length) ) {
+            
+            if (listaInvitati[i].equals(nomeInput)) {
+
+                trovato = true;
+                System.out.println("Sei tra gli invitati!");
+                
+            }
+
+            i++;
         }
 
-        if (!trovato) {
-            System.err.println("Non sei tra gli invitati.");
+        if ( trovato == false ) {
+            System.out.println("Non sei tra gli invitati.");
         }
     }
 }
